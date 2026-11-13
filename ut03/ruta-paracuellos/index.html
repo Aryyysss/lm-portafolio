@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Ruta PR-M 44 El Lavadero y Las Guindaleras · Paracuellos de Jarama
+    </title>
+    <meta
+      name="description"
+      content="Ruta a pie o en bici por Paracuellos de Jarama: recorrido, tramos, consejos e inscripción."
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <a href="#contenido" class="saltar">Saltar al contenido principal</a>
+
+    <header class="cabecera">
+      <p class="marca">Rutas por Paracuellos</p>
+      <nav class="menu" aria-label="Secciones de la página">
+        <ul>
+          <li><a href="#recorrido">Recorrido</a></li>
+          <li><a href="#tramos">Tramos</a></li>
+          <li><a href="#bici">En bici</a></li>
+          <li><a href="#inscripcion">Inscripción</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <h1>Ruta PR-M 44: El Lavadero y Las Guindaleras</h1>
+      <p class="intro">
+        Una ruta corta y señalizada para conocer los alrededores de Paracuellos
+        de Jarama, con vistas a la vega del río Jarama. Se puede hacer a pie o
+        en bici de montaña.
+      </p>
+
+      <section id="recorrido">
+        <h2>El recorrido</h2>
+        <p>
+          La ruta mide unos 5,5 km y sale del casco urbano. Pasa por la zona de
+          El Lavadero y sube hacia Las Guindaleras, desde donde se ve toda la
+          vega del Jarama. Está marcada con las señales blancas y amarillas de
+          los senderos de pequeño recorrido (PR).
+        </p>
+
+        <article class="consejos">
+          <h3>Consejos para hacer la ruta</h3>
+          <ul>
+            <li>Lleva agua: casi no hay sombra en la parte alta.</li>
+            <li>En verano, mejor a primera hora de la mañana.</li>
+            <li>
+              Si vas en bici, casco siempre y cuidado en las bajadas de tierra.
+            </li>
+            <li>Respeta los cultivos y no salgas del camino.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="tramos">
+        <h2>Tramos de la ruta</h2>
+        <table class="tabla">
+          <caption>
+            Distancia y tiempo aproximado de cada tramo
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Tramo</th>
+              <th scope="col">Distancia</th>
+              <th scope="col">A pie</th>
+              <th scope="col">En bici</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Pueblo – El Lavadero</th>
+              <td>1,5 km</td>
+              <td>20 min</td>
+              <td>7 min</td>
+            </tr>
+            <tr>
+              <th scope="row">El Lavadero – Las Guindaleras</th>
+              <td>2 km</td>
+              <td>30 min</td>
+              <td>12 min</td>
+            </tr>
+            <tr>
+              <th scope="row">Las Guindaleras – Pueblo</th>
+              <td>2 km</td>
+              <td>25 min</td>
+              <td>10 min</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total</th>
+              <td>5,5 km</td>
+              <td>1 h 15 min</td>
+              <td>29 min</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="bici">
+        <h2>¿No tienes bici? Alquílala</h2>
+        <p>
+          Si quieres hacer la ruta en bici, puedes
+          <a href="../alquiler/alquiler.html">alquilar una bici en BiciRuta</a>.
+          Para esta ruta te recomendamos la urbana si vas tranquilo, o la
+          eléctrica si no quieres sufrir en las subidas.
+        </p>
+
+        <figure>
+          <img
+            src="img/bici_electrica-400.jpg"
+            srcset="
+              img/bici_electrica-400.jpg   400w,
+              img/bici_electrica-800.jpg   800w,
+              img/bici_electrica-1200.jpg 1200w
+            "
+            sizes="(min-width: 700px) 400px, 100vw"
+            width="400"
+            height="300"
+            loading="lazy"
+            alt="E-Bike City E500, bicicleta eléctrica urbana, la recomendada para las subidas"
+          />
+          <figcaption>
+            La E-Bike City E500, ideal para las cuestas de Las Guindaleras.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <video
+            controls
+            preload="metadata"
+            width="640"
+            height="360"
+            poster="img/ruta_rio_poster.jpg"
+          >
+            <source src="media/ruta_rio.mp4" type="video/mp4" />
+            <track
+              kind="captions"
+              src="media/ruta_rio.es.vtt"
+              srclang="es"
+              label="Español"
+              default
+            />
+            <p>
+              Tu navegador no puede reproducir el vídeo.
+              <a href="media/ruta_rio.mp4">Descarga el vídeo de BiciRuta</a>.
+            </p>
+          </video>
+          <figcaption>
+            Vídeo de BiciRuta sobre sus rutas en bici, con subtítulos en
+            español.
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <aside id="inscripcion" class="lateral">
+      <h2>Apúntate a la próxima salida</h2>
+      <form
+        class="formulario"
+        action="#"
+        onsubmit="
+          alert('¡Inscripción enviada!');
+          return false;
+        "
+      >
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          autocomplete="name"
+          required
+        />
+
+        <label for="email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+
+        <label for="modalidad">Modalidad</label>
+        <select id="modalidad" name="modalidad">
+          <option value="pie">A pie</option>
+          <option value="bici">En bici</option>
+        </select>
+
+        <button type="submit" class="boton">Inscribirme</button>
+      </form>
+    </aside>
+
+    <footer class="pie">
+      <p>
+        Página hecha por Arya Jafari · 1.º ASIR · 0373 Lenguajes de marcas ·
+        <time datetime="2026-11-13">13/11/2026</time>
+      </p>
+    </footer>
+  </body>
+</html>

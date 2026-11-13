@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #222;
+  line-height: 1.5;
+}
+
+.saltar {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  background: #fff;
+  color: #1d3557;
+  padding: 8px 16px;
+  z-index: 10;
+}
+.saltar:focus {
+  top: 16px;
+}
+
+.cabecera {
+  background: #1d3557;
+  color: #f1faee;
+  padding: 16px;
+}
+.marca {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e9c46a;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.menu a {
+  color: #f1faee;
+}
+
+main {
+  padding: 16px;
+  max-width: 900px;
+}
+h1 {
+  font-size: 30px;
+  color: #1d3557;
+}
+h2 {
+  font-size: 24px;
+  color: #1d3557;
+  margin-top: 32px;
+}
+h3 {
+  font-size: 19px;
+}
+.intro {
+  font-size: 18px;
+}
+
+.consejos {
+  background: #f1faee;
+  border-left: 6px solid #1d3557;
+  padding: 8px 16px;
+}
+
+.tabla {
+  border-collapse: collapse;
+}
+.tabla caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.tabla th,
+.tabla td {
+  border: 1px solid #1d3557;
+  padding: 6px 12px;
+  text-align: left;
+}
+.tabla thead th {
+  background: #1d3557;
+  color: #f1faee;
+}
+.tabla tbody th,
+.tabla tfoot th {
+  background: #f1faee;
+}
+.tabla tfoot {
+  font-weight: bold;
+}
+
+figure {
+  margin: 16px 0;
+}
+figure img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+figcaption {
+  color: #555;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.lateral {
+  background: #f1faee;
+  padding: 16px;
+  margin: 24px 16px;
+  max-width: 500px;
+}
+.formulario label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+.formulario input,
+.formulario select {
+  width: 100%;
+  max-width: 320px;
+  padding: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.boton {
+  margin-top: 16px;
+  background: #e9c46a;
+  color: #1d3557;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid #1d3557;
+  outline-offset: 2px;
+}
+.cabecera :focus-visible {
+  outline-color: #e9c46a;
+}
+
+.pie {
+  background: #1d3557;
+  color: #f1faee;
+  padding: 12px 16px;
+  font-size: 14px;
+}
