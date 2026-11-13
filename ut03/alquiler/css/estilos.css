@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+/* saltar al contenido: escondido hasta que recibe el foco */
+.saltar {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  background: #fff;
+  color: #152a1d;
+  padding: 8px 16px;
+  z-index: 10;
+}
+.saltar:focus {
+  top: 16px;
+}
+
+.cabecera {
+  background: #152a1d;
+  padding: 16px;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+.menu a {
+  color: #f4ead8;
+}
+.menu a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 3px solid #e6945a;
+}
+
+.contenido {
+  padding: 16px;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+  margin-top: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+.texto {
+  color: #555;
+}
+.bici {
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+}
+
+.lateral {
+  background: #f4ead8;
+  padding: 12px;
+  margin: 24px 16px 0;
+}
+.boletin label {
+  display: block;
+  margin-bottom: 4px;
+}
+.boton {
+  background: #e6945a;
+  color: #152a1d;
+  font-weight: bold;
+  border: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* foco siempre visible */
+:focus-visible {
+  outline: 3px solid #152a1d;
+  outline-offset: 2px;
+}
+.cabecera :focus-visible {
+  outline-color: #e6945a;
+}
+
+.pie {
+  background: #152a1d;
+  color: #f4ead8;
+  padding: 12px;
+  font-size: 12px;
+}
+/* imágenes y vídeo que no se salen de la pantalla */
+.bici img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+.bici img {
+  width: 100%;
+  display: block;
+}
+
+/* en móvil cada ficha ocupa todo el ancho */
+@media (max-width: 699px) {
+  .bici {
+    display: block;
+    width: auto;
+  }
+}
+
+figure {
+  margin: 0;
+}
+figcaption {
+  color: #555;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* tabla de tarifas: los bordes van aquí, no en el html */
+.tarifas {
+  border-collapse: collapse;
+}
+.tarifas caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.tarifas th,
+.tarifas td {
+  border: 1px solid #152a1d;
+  padding: 6px 12px;
+  text-align: left;
+}
+.tarifas thead th {
+  background: #152a1d;
+  color: #f4ead8;
+}
+.tarifas tbody th {
+  background: #f4ead8;
+}
+.tarifas tfoot td {
+  font-size: 14px;
+  color: #555;
+}
