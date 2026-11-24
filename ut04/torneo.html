@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción · Torneo de e-sports del centro</title>
+  <link rel="stylesheet" href="css/torneo.css">
+  <script src="js/torneo.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+    <h1>Torneo de e-sports del centro</h1>
+    <p>Inscripción individual · plazas limitadas</p>
+  </header>
+
+  <main>
+    <!-- Método POST: el formulario lleva datos personales (nombre, NIA, correo y fecha
+         de nacimiento) que no deben quedar en la URL, el historial ni los registros del
+         servidor. Además crea una inscripción nueva en el servidor (no es una consulta),
+         y con POST el navegador avisa antes de reenviarla si se recarga la página. -->
+    <form id="form-torneo" action="https://httpbin.org/post" method="post">
+
+      <!-- 1. Datos del jugador -->
+      <fieldset>
+        <legend>Datos del jugador</legend>
+
+        <div class="campo">
+          <label for="nombre">Nombre y apellidos</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name"
+                 required minlength="3" maxlength="80">
+        </div>
+
+        <div class="campo">
+          <label for="nia">NIA (número de alumno)</label>
+          <input type="text" id="nia" name="nia" inputmode="numeric" aria-describedby="ayuda-nia"
+                 required pattern="[0-9]{8}" maxlength="8"
+                 title="8 cifras, sin letras ni espacios. Ej.: 20261234">
+          <small id="ayuda-nia" class="ayuda">8 cifras. Lo tienes en tu carné del centro.</small>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo del centro</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+
+        <div class="campo">
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="nacimiento" name="nacimiento" aria-describedby="ayuda-nacimiento"
+                 required min="1950-01-01">
+          <small id="ayuda-nacimiento" class="ayuda">Edad mínima: 16 años.</small>
+        </div>
+      </fieldset>
+
+      <!-- 2. Datos de juego -->
+      <fieldset>
+        <legend>Tu perfil de jugador</legend>
+
+        <div class="campo">
+          <label for="gamertag">Gamertag</label>
+          <input type="text" id="gamertag" name="gamertag" aria-describedby="ayuda-gamertag"
+                 required pattern="[A-Za-z0-9_]{3,16}" maxlength="16"
+                 title="De 3 a 16 caracteres: letras sin tilde, números o guion bajo">
+          <small id="ayuda-gamertag" class="ayuda">De 3 a 16 caracteres: letras, números o _ (sin espacios ni tildes).</small>
+        </div>
+
+        <div class="campo">
+          <label for="juego">Juego</label>
+          <select id="juego" name="juego" required>
+            <option value="">— Elige un juego —</option>
+            <option value="rocket-league">Rocket League</option>
+            <option value="valorant">Valorant</option>
+            <option value="fc">EA Sports FC</option>
+            <option value="mario-kart">Mario Kart</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="horas">Horas de juego a la semana</label>
+          <input type="number" id="horas" name="horas" aria-describedby="ayuda-horas"
+                 required min="0" max="40" step="1">
+          <small id="ayuda-horas" class="ayuda">De 0 a 40.</small>
+        </div>
+
+        <div class="campo">
+          <label for="color">Color de tu equipo</label>
+          <input type="color" id="color" name="color" value="#1e6b3a">
+        </div>
+      </fieldset>
+
+      <!-- 3. Nivel: radios con el mismo name -->
+      <fieldset>
+        <legend>Nivel</legend>
+        <div class="opcion">
+          <input type="radio" id="nivel-basico" name="nivel" value="principiante" required>
+          <label for="nivel-basico">Principiante</label>
+        </div>
+        <div class="opcion">
+          <input type="radio" id="nivel-medio" name="nivel" value="intermedio">
+          <label for="nivel-medio">Intermedio</label>
+        </div>
+        <div class="opcion">
+          <input type="radio" id="nivel-alto" name="nivel" value="avanzado">
+          <label for="nivel-alto">Avanzado</label>
+        </div>
+      </fieldset>
+
+      <!-- 4. Plataformas: checkboxes con value (al menos una, se comprueba con JS) -->
+      <fieldset id="plataformas">
+        <legend>Plataformas en las que puedes jugar</legend>
+        <div class="opcion">
+          <input type="checkbox" id="plat-pc" name="plataforma" value="pc">
+          <label for="plat-pc">PC</label>
+        </div>
+        <div class="opcion">
+          <input type="checkbox" id="plat-consola" name="plataforma" value="consola">
+          <label for="plat-consola">Consola</label>
+        </div>
+        <div class="opcion">
+          <input type="checkbox" id="plat-switch" name="plataforma" value="switch">
+          <label for="plat-switch">Nintendo Switch</label>
+        </div>
+      </fieldset>
+
+      <!-- 5. Otros datos -->
+      <fieldset>
+        <legend>Otros datos (opcionales)</legend>
+
+        <div class="campo">
+          <label for="twitch">Canal de Twitch o YouTube</label>
+          <input type="url" id="twitch" name="twitch" placeholder="https://www.twitch.tv/tucanal"
+                 aria-describedby="ayuda-twitch">
+          <small id="ayuda-twitch" class="ayuda">Dirección completa, empezando por https://</small>
+        </div>
+
+        <div class="campo">
+          <label for="comentarios">Comentarios</label>
+          <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- 6. Normas -->
+      <div class="opcion">
+        <input type="checkbox" id="normas" name="normas" value="acepto" required>
+        <label for="normas">He leído y acepto las normas del torneo</label>
+      </div>
+
+      <button type="submit">Inscribirme</button>
+    </form>
+  </main>
+</body>
+</html>

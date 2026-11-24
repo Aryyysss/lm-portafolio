@@ -1,0 +1,173 @@
+/* ===== torneo.css · Inscripción al torneo de e-sports ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: #e6e8f0;
+  background: #12141c;
+}
+
+.cabecera {
+  padding: 24px 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #3b1f73, #12141c);
+  border-bottom: 2px solid #7c4dff;
+}
+
+.cabecera h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.cabecera p {
+  margin: 4px 0 0;
+  color: #b9a7ff;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 16px;
+  background: #1c1f2b;
+  border: 1px solid #2f3346;
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 6px;
+  font-weight: 700;
+  color: #b9a7ff;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.campo:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.opcion label {
+  font-weight: 400;
+}
+
+form > .opcion {
+  margin: 0 0 20px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="color"]),
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  color: #e6e8f0;
+  background: #12141c;
+  border: 1px solid #4a4f66;
+  border-radius: 6px;
+}
+
+input[type="color"] {
+  width: 64px;
+  height: 40px;
+  padding: 2px;
+  background: #12141c;
+  border: 1px solid #4a4f66;
+  border-radius: 6px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #7c4dff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #7c4dff;
+  outline-offset: 1px;
+}
+
+.ayuda {
+  font-size: 0.875rem;
+  color: #9aa0b8;
+}
+
+/* Estados de validación tras interactuar */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border: 2px solid #ff5c7a;
+}
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border: 2px solid #3ddc97;
+}
+
+input[type="radio"]:user-invalid + label,
+input[type="checkbox"]:user-invalid + label {
+  color: #ff5c7a;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: #7c4dff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #6435e6;
+}
+
+@media (min-width: 600px) {
+  main {
+    padding: 24px;
+  }
+
+  button {
+    width: auto;
+    padding: 12px 32px;
+  }
+}
