@@ -77,3 +77,27 @@ function actualizarContador() {
 }
 averia.addEventListener("input", actualizarContador);
 actualizarContador(); // por si el navegador recuerda texto al volver atrás
+
+// ===== AMPLIACIÓN 1 · Letra del DNI =====
+// El pattern solo comprueba la FORMA (8 cifras + 1 letra), no que la letra sea la buena.
+// La letra se calcula: resto de dividir el número entre 23 -> posición en esta tabla.
+const dni = document.getElementById("dni");
+const LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+function comprobarLetraDni() {
+  // Si está vacío o no tiene la forma correcta, dejamos que actúen required y pattern
+  if (dni.value === "" || dni.validity.patternMismatch) {
+    dni.setCustomValidity("");
+    return;
+  }
+  const numero = Number(dni.value.slice(0, 8));
+  const letraEscrita = dni.value.slice(8).toUpperCase(); // admitimos minúscula
+  const letraCorrecta = LETRAS_DNI[numero % 23];
+
+  dni.setCustomValidity(
+    letraEscrita === letraCorrecta
+      ? ""
+      : "La letra del DNI no es correcta para ese número.",
+  );
+}
+dni.addEventListener("input", comprobarLetraDni);

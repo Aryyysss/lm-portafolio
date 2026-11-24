@@ -283,7 +283,20 @@
             />
           </div>
         </fieldset>
-
+        <!-- AMPLIACIÓN 2 · Honeypot (campo trampa anti-spam).
+           Una persona no lo ve y lo deja vacío; muchos bots rellenan todos los campos.
+           Si llega con algo escrito, el servidor descarta el envío. No usamos display:none
+           porque algunos bots se saltan los campos ocultos así. -->
+        <div class="trampa" aria-hidden="true">
+          <label for="web">Deja este campo vacío</label>
+          <input
+            type="text"
+            id="web"
+            name="web"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
         <!-- 7. Privacidad -->
         <div class="opcion">
           <input

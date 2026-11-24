@@ -217,3 +217,12 @@ input[type="checkbox"]:user-invalid + label {
 fieldset:disabled {
   opacity: 0.5;
 }
+
+/* ===== Ampliación · Campo trampa (honeypot) fuera de la pantalla ===== */
+.trampa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
