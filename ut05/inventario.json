@@ -1,0 +1,64 @@
+{
+  "aula": "Aula 1.º ASIR",
+  "centro": "Centro de FP Prometeo",
+  "actualizado": "2026-11-26",
+  "equipos": [
+    {
+      "id": "EQ-01",
+      "tipo": "router",
+      "modelo": "Cisco ISR 4321",
+      "ip": "192.168.10.1",
+      "mac": "00:1A:2B:3C:4D:01",
+      "ubicacion": "Rack del aula",
+      "fechaCompra": "2023-09-12"
+    },
+    {
+      "id": "EQ-02",
+      "tipo": "switch",
+      "modelo": "Cisco Catalyst 2960-24TT",
+      "ip": "192.168.10.2",
+      "mac": "00:1A:2B:3C:4D:02",
+      "ubicacion": "Rack del aula",
+      "fechaCompra": "2023-09-12",
+      "puertos": 24
+    },
+    {
+      "id": "EQ-03",
+      "tipo": "punto-acceso",
+      "modelo": "TP-Link EAP245",
+      "ip": "192.168.10.3",
+      "mac": "00:1A:2B:3C:4D:03",
+      "ubicacion": "Techo, centro del aula",
+      "fechaCompra": "2024-02-20"
+    },
+    {
+      "id": "EQ-04",
+      "tipo": "servidor",
+      "modelo": "Dell PowerEdge T150",
+      "ip": "192.168.10.10",
+      "mac": "00:1A:2B:3C:4D:10",
+      "ubicacion": "Rack del aula",
+      "fechaCompra": "2024-09-05",
+      "sistema": "Ubuntu Server 24.04 LTS"
+    },
+    {
+      "id": "EQ-05",
+      "tipo": "servidor",
+      "modelo": "HP ProLiant ML30 Gen10",
+      "ip": "192.168.10.11",
+      "mac": "00:1A:2B:3C:4D:11",
+      "ubicacion": "Rack del aula",
+      "fechaCompra": "2022-10-03",
+      "sistema": "Windows Server 2022"
+    },
+    {
+      "id": "EQ-06",
+      "tipo": "impresora",
+      "modelo": "Brother HL-L5100DN",
+      "ip": "192.168.10.50",
+      "mac": "00:1A:2B:3C:4D:50",
+      "ubicacion": "Mesa del profesor",
+      "fechaCompra": "2021-11-15"
+    }
+  ]
+}

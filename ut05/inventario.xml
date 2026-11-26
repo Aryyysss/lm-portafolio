@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Inventario de los equipos de red del aula (UT05 · ejercicio de la unidad) -->
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="inventario.xsd"
+            aula="Aula 1.º ASIR" centro="Centro de FP Prometeo" actualizado="2026-11-26">
+
+  <equipo id="EQ-01" tipo="router">
+    <modelo>Cisco ISR 4321</modelo>
+    <ip>192.168.10.1</ip>
+    <mac>00:1A:2B:3C:4D:01</mac>
+    <ubicacion>Rack del aula</ubicacion>
+    <fechaCompra>2023-09-12</fechaCompra>
+  </equipo>
+
+  <equipo id="EQ-02" tipo="switch">
+    <modelo>Cisco Catalyst 2960-24TT</modelo>
+    <ip>192.168.10.2</ip>
+    <mac>00:1A:2B:3C:4D:02</mac>
+    <ubicacion>Rack del aula</ubicacion>
+    <fechaCompra>2023-09-12</fechaCompra>
+    <puertos>24</puertos>
+  </equipo>
+
+  <equipo id="EQ-03" tipo="punto-acceso">
+    <modelo>TP-Link EAP245</modelo>
+    <ip>192.168.10.3</ip>
+    <mac>00:1A:2B:3C:4D:03</mac>
+    <ubicacion>Techo, centro del aula</ubicacion>
+    <fechaCompra>2024-02-20</fechaCompra>
+  </equipo>
+
+  <equipo id="EQ-04" tipo="servidor">
+    <modelo>Dell PowerEdge T150</modelo>
+    <ip>192.168.10.10</ip>
+    <mac>00:1A:2B:3C:4D:10</mac>
+    <ubicacion>Rack del aula</ubicacion>
+    <fechaCompra>2024-09-05</fechaCompra>
+    <sistema>Ubuntu Server 24.04 LTS</sistema>
+  </equipo>
+
+  <equipo id="EQ-05" tipo="servidor">
+    <modelo>HP ProLiant ML30 Gen10</modelo>
+    <ip>192.168.10.11</ip>
+    <mac>00:1A:2B:3C:4D:11</mac>
+    <ubicacion>Rack del aula</ubicacion>
+    <fechaCompra>2022-10-03</fechaCompra>
+    <sistema>Windows Server 2022</sistema>
+  </equipo>
+
+  <equipo id="EQ-06" tipo="impresora">
+    <modelo>Brother HL-L5100DN</modelo>
+    <ip>192.168.10.50</ip>
+    <mac>00:1A:2B:3C:4D:50</mac>
+    <ubicacion>Mesa del profesor</ubicacion>
+    <fechaCompra>2021-11-15</fechaCompra>
+  </equipo>
+
+</inventario>
